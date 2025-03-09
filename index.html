@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Konlan Godwin, a passionate web developer skilled in HTML, CSS, JavaScript, and Java.">
+    <title>Konlan Godwin | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Konlan Godwin</h1>
+            <p class="tagline">Web Developer | UI/UX Enthusiast</p>
+        </div>
+        <nav>
+            <input type="radio" id="bio-tab" name="tab" checked>
+            <label for="bio-tab">Biography</label>
+
+            <input type="radio" id="catalog-tab" name="tab">
+            <label for="catalog-tab">Catalog</label>
+
+            <input type="radio" id="gallery-tab" name="tab">
+            <label for="gallery-tab">Gallery</label>
+
+            <!-- Theme Toggle Button -->
+            <button id="theme-toggle" aria-label="Toggle theme">
+                🌓
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="biography" class="content-section">
+            <h2>Biography</h2>
+            <p>Hello! I'm Konlan Godwin, a passionate web developer with expertise in <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, and some knowledge of <strong>Java</strong>. I love creating responsive, user-friendly, and visually appealing websites that deliver exceptional user experiences.</p>
+            <p>I hold a <strong>Bachelor's Degree in Computer Science</strong> from the <strong>University of Ghana</strong>, where I graduated with honors. During my time at university, I developed a strong foundation in programming, algorithms, and software engineering principles. I also attended <strong>Accra High School</strong>, where I first discovered my passion for technology and problem-solving.</p>
+            <p>In addition to my formal education, I have completed several online certifications, including:</p>
+            <ul>
+                <li><strong>Responsive Web Design Certification</strong> from freeCodeCamp.</li>
+                <li><strong>JavaScript Algorithms and Data Structures Certification</strong> from freeCodeCamp.</li>
+                <li><strong>Java Programming Masterclass</strong> from Udemy.</li>
+            </ul>
+            <p>When I'm not coding, I enjoy exploring new technologies, contributing to open-source projects, and sharing my knowledge with others. I believe in continuous learning and strive to stay updated with the latest trends in web development and software engineering.</p>
+        </section>
+
+        <section id="catalog" class="content-section">
+            <h2>Catalog</h2>
+            <p>Here are some of my key skills and projects:</p>
+            <ul>
+                <li><strong>Responsive Web Design:</strong> Crafting websites that look great on all devices.</li>
+                <li><strong>JavaScript Interactivity:</strong> Building dynamic and interactive web applications.</li>
+                <li><strong>UI/UX Principles:</strong> Designing intuitive and user-centered interfaces.</li>
+                <li><strong>Java Development:</strong> Developing backend solutions and applications.</li>
+            </ul>
+        </section>
+
+        <section id="gallery" class="content-section">
+            <h2>Gallery</h2>
+            <p>Explore snapshots of my work and projects:</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="project1.jpg" alt="Project 1 - Responsive Website">
+                    <p>Responsive Website Design</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="project2.jpg" alt="Project 2 - JavaScript App">
+                    <p>Interactive JavaScript Application</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="project3.jpg" alt="Project 3 - UI/UX Design">
+                    <p>UI/UX Design Prototype</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Konlan Godwin. All rights reserved.</p>
+        <p>Connect with me on <a href="https://linkedin.com/in/konlangodwin" target="_blank" rel="noopener noreferrer">LinkedIn</a> or <a href="https://github.com/konlangodwin" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+    </footer>
+
+    <!-- JavaScript for Theme Toggle -->
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        // Check for saved theme in localStorage
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            body.classList.add(savedTheme);
+        }
+
+        // Toggle theme on button click
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('light-theme');
+            const isLightTheme = body.classList.contains('light-theme');
+            localStorage.setItem('theme', isLightTheme ? 'light-theme' : '');
+        });
+    </script>
+</body>
+</html>
